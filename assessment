@@ -1,0 +1,28 @@
+const NFTs =[]
+function mintNFT (_Name,_Income,_Tax,_City ) {
+const NFT ={
+    "Name" : _Name,
+    "Income": _Income,
+    "Tax":_Tax,
+    "City": _City,
+}
+NFTs.push(NFT);
+console.log("Minted: " + _Name);
+}
+function listNFTs () {
+for(let i =0; i<NFTs.length;i++){
+    console.log("Name : " + NFTs[i].Name);
+    console.log("Income : "+ NFTs[i].Income );
+    console.log("Tax : "+ NFTs[i].Tax);
+    console.log("City: "+ NFTs[i].City);
+}  
+}
+function getTotalSupply() {
+console.log("\n" + NFTs.length);
+}
+mintNFT("Rajat", "5,00,000","35 percent", "Lucknow" );
+mintNFT("Omkar", "2,50,000","26 percent", "Kolkata" );
+mintNFT("Jay", "80,000","33 percent", "Jaipur" );
+mintNFT("Harshit", "1,50,000","30 percent", "Surat" );
+listNFTs();
+getTotalSupply();
